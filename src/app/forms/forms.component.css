@@ -1,0 +1,8 @@
+section {
+  border:2px solid royalblue;
+}
+
+.error {
+  border:3px solid maroon;
+  padding:10px;
+}

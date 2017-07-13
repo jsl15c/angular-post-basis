@@ -1,0 +1,21 @@
+<section>
+  <h2>Forms Component</h2>
+  <!-- "ngSubmit()" is better than click function because
+        it can handle both click and enter key -->
+
+        <!-- ngSubmit requires input names -->
+  <form (ngSubmit)="handleSubmission()">
+    <h3>Log in (not really)</h3>
+    <p>FormsModule allows us to use "ngModel" and "ngSubmit"</p>
+    <label for="email"></label>
+    <p class="error" *ngIf="emailMsg">{{emailMsg}}</p>
+    <input id="email" type="email" placeholder="zuck@fb.com"
+           [(ngModel)]="theUser.email" name="email" />
+    <br />
+    <label for="password"></label>
+    <p class="error" *ngIf="passwordMsg">{{passwordMsg}}</p>
+    <input id="password" type="password" placeholder="*****"
+           [(ngModel)]="theUser.password" name="password"/>
+           <button>submit</button>
+  </form>
+</section>
